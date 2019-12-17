@@ -10,12 +10,12 @@ import java.util.List;
 
 public class CountLongWords {
     public static void main(String[] args) throws IOException {
-        String contents = new String(Files.readAllBytes(Paths.get("D:\\countlength.txt")), StandardCharsets.UTF_8);
+        String contents = new String(Files.readAllBytes(Paths.get("resource\\countlength.txt")), StandardCharsets.UTF_8);
         List<String> words = Arrays.asList(contents.split(" "));
 
         long count = 0;
         for (String w : words) {
-            if (w.length() > 12) {
+            if (w.length() > 2) {
                 count++;
             }
         }
